@@ -2,15 +2,15 @@ apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
   creationTimestamp: null
-  name: ashu-cisco-app
-  namespace: ashu-project # namespace 
+  name: sai-cisco-app
+  namespace: sai-ns # namespace 
 spec:
   maxReplicas: 10
   minReplicas: 3
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: ashu-cisco-app
+    name: sai-cisco-app
   targetCPUUtilizationPercentage: 70
 status:
   currentReplicas: 0
